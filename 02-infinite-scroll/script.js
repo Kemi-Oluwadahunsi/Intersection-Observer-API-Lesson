@@ -1,30 +1,73 @@
+// const userList = document.getElementById("user-list");
+// const sentinel = document.getElementById("sentinel");
+// let page = 1;
+
+// // Fetch 10 users per page
+// const fetchUsers = async () => {
+//   const res = await fetch(`https://randomuser.me/api/?results=12&page=${page}`);
+//   const data = await res.json();
+
+//   data.results.forEach(user => {
+//     const card = document.createElement("div");
+//     card.className = "card";
+//     card.innerHTML = `
+//       <img src="${user.picture.medium}" alt="${user.name.first}" />
+//       <h3>${user.name.first} ${user.name.last}</h3>
+//       <p>${user.email}</p>
+//     `;
+//     userList.appendChild(card);
+//   });
+
+//   page++;
+// };
+
+// // Load initial users
+// fetchUsers();
+
+// // Observer to trigger loading more users
+// const loadMore = (entries) => {
+//   const entry = entries[0];
+//   if (entry.isIntersecting) {
+//     fetchUsers();
+//   }
+// };
+
+// const observer = new IntersectionObserver(loadMore, {
+//   root: null,
+//   rootMargin: "250px",
+//   threshold: 1.0
+// });
+
+// observer.observe(sentinel);
+
+
 const userList = document.getElementById("user-list");
 const sentinel = document.getElementById("sentinel");
-let page = 1;
+const page = 1;
 
-// Fetch 10 users per page
+// fetching the first 12 users on page load
+
 const fetchUsers = async () => {
   const res = await fetch(`https://randomuser.me/api/?results=12&page=${page}`);
   const data = await res.json();
 
-  data.results.forEach(user => {
+  data.results.forEach((user) => {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <img src="${user.picture.medium}" alt="${user.name.first}" />
-      <h3>${user.name.first} ${user.name.last}</h3>
-      <p>${user.email}</p>
-    `;
+        <img src="${user.picture.medium}" alt="${user.name.first}" />
+        <h3>${user.name.first} ${user.name.last}</h3>
+        <p>${user.email}</p>
+        `;
     userList.appendChild(card);
   });
-
   page++;
 };
 
-// Load initial users
+// load first 12 users on page load
 fetchUsers();
 
-// Observer to trigger loading more users
+// create infinite scroll observer
 const loadMore = (entries) => {
   const entry = entries[0];
   if (entry.isIntersecting) {
@@ -35,7 +78,8 @@ const loadMore = (entries) => {
 const observer = new IntersectionObserver(loadMore, {
   root: null,
   rootMargin: "200px",
-  threshold: 1.0
+  threshold: 1,
 });
 
+// Start observing 
 observer.observe(sentinel);
