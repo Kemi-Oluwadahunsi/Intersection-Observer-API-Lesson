@@ -14,6 +14,7 @@ These projects are crafted to help beginners and intermediate developers underst
 3. [Triggering Animations on Scroll](#3-triggering-animations-on-scroll)
 4. [Ad View Tracking](#4-ad-view-tracking)
 5. [Sticky Navigation & Mega Scroll Page](#5-sticky-navigation--mega-scroll-page)
+6. [Mega Scroll Page](#6-mega-scroll-page)
 
 ---
 
@@ -48,7 +49,7 @@ Perfect for performance optimization, especially on image-heavy websites.
 ### 2. Infinite Scrolling
 
 **Description:**  
-Loads more data as the user scrolls down a list — just like social media feeds.
+Loads more data as the user scrolls down a list, just like social media feeds.
 
 **Use Case:**  
 Ideal for blogs, feeds, and dynamic content fetching.
@@ -89,24 +90,41 @@ Used for analytics, engagement metrics, or advertisement impressions.
 
 🔗 Features:
 - Tracks ad visibility duration
-- Counts number of times an ad was seen
+- Counts the number of times an ad was seen
 
 ---
 
-### 5. Sticky Navigation & Mega Scroll Page
+### 5. Sticky Header
 
 **Description:**  
-Implements a sticky header and smooth-scroll effect when clicking on anchor links.
+Implements a sticky header that appears after scrolling past a specified section of the page.
 
 **Use Case:**  
-Ideal for single-page websites, documentation pages, and portfolios.
+Great for enhancing navigation in long scrollable pages by keeping the menu visible.
 
-📂 Folder: `/05-sticky-header-mega-scroll`
+📂 Folder: `/05-sticky-header`
 
 🔗 Features:
-- Sticky navigation that appears after scrolling past the hero
-- CSS-powered smooth scrolling
-- Intersection Observer used to toggle sticky header class
+- Uses Intersection Observer to toggle sticky class
+- Clean CSS transition for visibility
+- Works well for blog posts, articles, or dashboards
+
+---
+
+### 6. Mega Scroll Page
+
+**Description:**  
+A single-page scroll experience with smooth navigation between multiple sections via menu links.
+
+**Use Case:**  
+Ideal for portfolios, landing pages, or documentation websites.
+
+📂 Folder: `/06-mega-scroll-page`
+
+🔗 Features:
+- Smooth CSS scroll animation to sections
+- Active section detection for navigation
+- Clean layout with sectioned content
 
 ---
 
