@@ -16,7 +16,7 @@ const adObserver = new IntersectionObserver(
     });
   },
   {
-    // At least 50% of the ad must be visible
+    // At least 50% of the ad must be visible before tracking
     threshold: 0.5,
   }
 );

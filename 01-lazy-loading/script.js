@@ -1,6 +1,6 @@
 const gallery = document.getElementById("gallery");
 
-// Generate 20 placeholder images from https://picsum.photos
+// Generate 20 placeholder images from https://picsum.photos endpoint
 for (let i = 1; i <= 20; i++) {
   const img = document.createElement("img");
   img.setAttribute("data-src", `https://picsum.photos/id/${i + 6}/400/300`);

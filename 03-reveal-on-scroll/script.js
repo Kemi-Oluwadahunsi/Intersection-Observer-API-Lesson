@@ -5,7 +5,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.remove("hidden");
-        // Optional: Stop observing once revealed
+        // Optional: Stop observing once revealed, this helps with app performance
         observer.unobserve(entry.target); 
       }
     });

@@ -14,7 +14,8 @@ const observer = new IntersectionObserver(
   {
     root: null,
     threshold: 0,
-    rootMargin: "-80px", // Adjust based on nav height
+    // Adjust based on nav height
+    rootMargin: "-80px", 
   }
 );
 
