@@ -1,6 +1,6 @@
 # Intersection Observer Projects – Practical Use Cases
 
-Welcome to this repository! 🎉  
+Welcome to this repository! 
 This repo contains **5 real-world projects** that demonstrate how to use the powerful **Intersection Observer API** in frontend development.
 
 These projects are crafted to help beginners and intermediate developers understand and implement scroll-based interactions in modern web applications — all through practical, easy-to-follow examples.
